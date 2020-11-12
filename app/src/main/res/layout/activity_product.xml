@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ProductActivity">
+
+    <EditText
+        android:id="@+id/edtProductName"
+        android:hint="Insert Name Here"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        />
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp"/>
+    
+    <EditText
+        android:id="@+id/edtQtdProduct"
+        android:hint="Amount desired"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberSigned"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp"/>
+
+    <EditText
+        android:id="@+id/edtPriceProduct"
+        android:hint="Product price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"/>
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="30dp"/>
+    <Button
+        android:id="@+id/saveProduct"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save Product"
+        />
+
+
+
+</LinearLayout>
