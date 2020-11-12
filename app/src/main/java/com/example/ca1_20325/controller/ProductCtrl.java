@@ -4,6 +4,8 @@ import com.example.ca1_20325.DAO.ProductDAO;
 import com.example.ca1_20325.Product;
 import com.example.ca1_20325.dbHelper.ConnectionSQLite;
 
+import java.util.List;
+
 public class ProductCtrl {
     private final ProductDAO productDAO;
 
@@ -14,5 +16,9 @@ public class ProductCtrl {
     public long saveProductCtrl (Product pProduct) {
         return this.productDAO.saveProductDAO(pProduct);
         //*********************************************
+    }
+
+    public List<Product>getListProductsCtrl(){
+        return this.productDAO.getListProductDAO();
     }
 }

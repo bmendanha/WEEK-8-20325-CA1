@@ -7,6 +7,8 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 
 import com.example.ca1_20325.adapters.adapterListProducts;
+import com.example.ca1_20325.controller.ProductCtrl;
+import com.example.ca1_20325.dbHelper.ConnectionSQLite;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,12 +25,13 @@ public class ListProducts extends AppCompatActivity {
         setContentView(R.layout.activity_list_products);
 
         //Search products in database
-        this.productList = new ArrayList<>();
+        ProductCtrl productCtrl = new ProductCtrl(ConnectionSQLite.getInstance(ListProducts.this));
+        productList = productCtrl.getListProductsCtrl();
 
         this.lsvProduct = (ListView) findViewById(R.id.lsvProducts);
 
-        this.adapterListProduct = new adapterListProducts (ListProducts.this, this.productList) {
-        };
+        this.adapterListProduct = new adapterListProducts (ListProducts.this, this.productList);
+
         this.lsvProduct.setAdapter(this.adapterListProduct);
     }
 }
