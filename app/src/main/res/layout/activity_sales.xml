@@ -1,9 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    android:orientation="vertical"
     tools:context=".SalesActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select a product"/>
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="30dp"/>
+    <Spinner
+        android:id="@+id/spnproduct"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></Spinner>
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp"/>
+<EditText
+    android:id="@+id/edtQtdProduct"
+    android:layout_width="match_parent"
+    android:inputType="numberSigned"
+    android:hint="Input the quantity desired"
+    android:layout_height="wrap_content"/>
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnAddProduct"
+            android:text="Add Product"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="eventAddProduct"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/btnCloseSale"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Buy" />
+
+    </LinearLayout>
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Your basket bellow"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TOTAL: " />
+
+        <TextView
+            android:id="@+id/tvTotalOrder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Your basket bellow" />
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lsvProducts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

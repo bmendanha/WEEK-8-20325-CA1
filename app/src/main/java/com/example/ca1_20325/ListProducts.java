@@ -25,6 +25,7 @@ public class ListProducts extends AppCompatActivity {
     private ListView lsvProduct;
     private List<Product> productList;
     private adapterListProducts adapterListProduct;
+    private ProductCtrl productCtrl;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +33,7 @@ public class ListProducts extends AppCompatActivity {
         setContentView(R.layout.activity_list_products);
 
         //Search products in database
-        ProductCtrl productCtrl = new ProductCtrl(ConnectionSQLite.getInstance(ListProducts.this));
+        this.productCtrl= new ProductCtrl(ConnectionSQLite.getInstance(ListProducts.this));
         productList = productCtrl.getListProductsCtrl();
 
         this.lsvProduct = (ListView) findViewById(R.id.lsvProducts);
@@ -91,5 +92,9 @@ public class ListProducts extends AppCompatActivity {
 
             }
         });
+    }
+    public void eventRefreshProducts(View view){
+        this.adapterListProduct.refresh(this.productCtrl.getListProductsCtrl());
+
     }
 }

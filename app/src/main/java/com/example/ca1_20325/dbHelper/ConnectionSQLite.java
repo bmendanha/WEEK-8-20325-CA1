@@ -43,7 +43,26 @@ public class ConnectionSQLite extends SQLiteOpenHelper {
                 ")";
     sqLiteDatabase.execSQL(sqlProductTable);
 
+    String sqlTableSales=
+        "CREATE TABLE IF NOT EXISTS sales" +
+                "(" +
+                "id INTEGER PRIMARY KEY," +
+                "data INTEGER"+
+                ")";
+        sqLiteDatabase.execSQL(sqlTableSales);
+
+     String sqlTableOrder=
+          "CREATE TABLE IF NOT EXISTS orders" +
+                  "(" +
+                  "id INTEGER PRIMARY KEY," +
+                  "quantity INTEGER,"+
+                  "id_product INTEGER,"+
+                  "id_sales INTEGER"+
+                  ")";
+        sqLiteDatabase.execSQL(sqlTableOrder);
+
     }
+
 
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {

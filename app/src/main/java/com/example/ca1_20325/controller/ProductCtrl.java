@@ -25,4 +25,9 @@ public class ProductCtrl {
     public boolean deleteProductCtrl(long pIdProduct){
         return this.productDAO.deleteProductDAO(pIdProduct);
     }
+
+    public boolean refreshProductCtrl(Product pProduct){
+        return this.productDAO.refreshProductDAO(pProduct);
+    }
+
 }

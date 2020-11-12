@@ -27,5 +27,14 @@
         android:layout_height="wrap_content"
         android:text="View Products"
         tools:ignore="MissingConstraints" />
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp"/>
+    <Button
+        android:id="@+id/btnOrderProduct"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Order Products"
+        tools:ignore="MissingConstraints" />
 
 </LinearLayout>

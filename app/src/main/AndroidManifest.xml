@@ -16,7 +16,8 @@
         <activity
             android:name=".ProductActivity"
             android:label="Product Registration" />
-        <activity android:name=".SalesActivity" />
+        <activity android:name=".SalesActivity"
+            android:label="Your Order Here"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

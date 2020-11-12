@@ -52,7 +52,11 @@ public class adapterListProducts extends BaseAdapter {
         tvPriceProduct.setText(String.valueOf(this.productList.get(position).getPrice()));
         tvQtdProduct.setText(String.valueOf(this.productList.get(position).getQuantity()));
 
-
         return v;
+    }
+    public void refresh (List<Product> pProducts){
+        this.productList.clear();
+        this.productList = pProducts;
+        this.notifyDataSetChanged();
     }
 }

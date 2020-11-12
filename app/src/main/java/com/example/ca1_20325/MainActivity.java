@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
     private Button btnInsProduct;
     private Button btnListProduct;
+    private Button btnOrderProduct;
 
 
     @Override
@@ -86,9 +87,8 @@ public class MainActivity extends AppCompatActivity {
 */
 
         this.btnInsProduct = (Button) findViewById(R.id.btnInsProduct);
-
         this.btnListProduct = (Button) findViewById(R.id.btnListProduct);
-
+        this.btnOrderProduct = (Button) findViewById(R.id.btnOrderProduct);
 
 
         this.btnInsProduct.setOnClickListener(new View.OnClickListener() {
@@ -104,6 +104,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, ListProducts.class);
+                startActivity(intent);
+            }
+        });
+
+        this.btnOrderProduct.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, SalesActivity.class);
                 startActivity(intent);
             }
         });

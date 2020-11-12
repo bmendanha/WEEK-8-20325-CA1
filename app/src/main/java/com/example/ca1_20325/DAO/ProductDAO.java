@@ -94,4 +94,35 @@ public class ProductDAO {
          }
          return true;
         }
+
+    public boolean refreshProductDAO (Product pProduct){
+        SQLiteDatabase db= null;
+        try{
+            db = this.connectionSQLite.getWritableDatabase();
+            ContentValues productAttributes = new ContentValues();
+            productAttributes.put("name", pProduct.getName());
+            productAttributes.put("quantity", pProduct.getQuantity());
+            productAttributes.put("price", pProduct.getPrice());
+
+            int refresh = db.update(
+                    "product",
+                    productAttributes,
+                    "id=?",
+                new String[]{String.valueOf(pProduct.getId())}
+            );
+
+            if (refresh>0){
+                return true;
+            }
+
+        }catch (Exception e){
+            Log.d("ERROR PRODUCT DAO", "ERROR to refresh the product");
+            return false;
+        }finally {
+            if (db != null) {
+                db.close();
+            }
+        }
+        return false;
+    }
 }
