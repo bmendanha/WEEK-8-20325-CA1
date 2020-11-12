@@ -20,5 +20,6 @@ public class ProductCtrl {
 
     public List<Product>getListProductsCtrl(){
         return this.productDAO.getListProductDAO();
+
     }
 }

@@ -40,7 +40,7 @@ public class ProductDAO {
         return 0;
     }
 
-    public void getListProductDAO() {
+    public List<Product> getListProductDAO() {
         List<Product> productList = new ArrayList<>();
         SQLiteDatabase db = null;
         Cursor cursor;
@@ -70,6 +70,7 @@ public class ProductDAO {
                     db.close();
                 }
         }
-     }
+        return productList;
+    }
 
 }
