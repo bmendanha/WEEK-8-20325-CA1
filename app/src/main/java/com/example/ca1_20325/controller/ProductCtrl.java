@@ -20,6 +20,9 @@ public class ProductCtrl {
 
     public List<Product>getListProductsCtrl(){
         return this.productDAO.getListProductDAO();
+    }
 
+    public boolean deleteProductCtrl(long pIdProduct){
+        return this.productDAO.deleteProductDAO(pIdProduct);
     }
 }

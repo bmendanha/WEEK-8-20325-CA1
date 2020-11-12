@@ -73,4 +73,25 @@ public class ProductDAO {
         return productList;
     }
 
+        public boolean deleteProductDAO (long pIdProduct){
+        SQLiteDatabase db= null;
+         try{
+             db = this.connectionSQLite.getWritableDatabase();
+             db.delete(
+                     "product",
+                     "id=?",
+             new String[]{String.valueOf(pIdProduct)}
+
+             );
+
+         }catch (Exception e){
+             Log.d("ERROR PRODUCT DAO", "ERROR to delete the product");
+             return false;
+         }finally {
+             if (db != null) {
+                 db.close();
+             }
+         }
+         return true;
+        }
 }
