@@ -25,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
         // calling the created SQLite connection
         ConnectionSQLite connectionSQLite = ConnectionSQLite.getInstance(this);
 
+        //I kept the part bellow just to show a small test that I have done
+
         //Forced Product here
         //1. Darjelling : 8.50 per 100 gram bag
         //2. Assam : 7.50 per 100 gram bag
@@ -32,7 +34,8 @@ public class MainActivity extends AppCompatActivity {
         //4. Earl Grey:  3.5 per 100 gram bag
         //5. Irish Breakfast : 2.5 per 100 gram bag
 
-        Product product1 = new Product();
+
+    /*    Product product1 = new Product();
         product1.setId(1);
         product1.setName("Darjelling");
         product1.setQuantity(1000);
@@ -78,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
         long result5 = productCtrl.saveProductCtrl(product5);
         System.out.println("RESULTADO: "+ result5);
 
-
+*/
 
         this.btnInsProduct = (Button) findViewById(R.id.btnInsProduct);
 

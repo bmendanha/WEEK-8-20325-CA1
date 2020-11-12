@@ -8,9 +8,24 @@
     android:orientation="vertical"
     tools:context=".ProductActivity">
 
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="30dp"/>
+
+    <EditText
+        android:id="@+id/edtIdProduct"
+        android:hint="Insert product ID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberSigned"
+        />
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp"/>
+
     <EditText
         android:id="@+id/edtProductName"
-        android:hint="Insert Name Here"
+        android:hint="Insert Product Name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
@@ -21,7 +36,7 @@
     
     <EditText
         android:id="@+id/edtQtdProduct"
-        android:hint="Amount desired"
+        android:hint="Insert the amount"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="numberSigned"/>
@@ -32,7 +47,7 @@
 
     <EditText
         android:id="@+id/edtPriceProduct"
-        android:hint="Product price"
+        android:hint="Insert the price"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="numberDecimal"/>
