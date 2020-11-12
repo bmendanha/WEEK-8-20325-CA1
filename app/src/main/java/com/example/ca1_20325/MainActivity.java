@@ -16,6 +16,8 @@ import com.example.ca1_20325.dbHelper.ConnectionSQLite;
 public class MainActivity extends AppCompatActivity {
 
     private Button btnInsProduct;
+    private Button btnListProduct;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -85,11 +87,23 @@ public class MainActivity extends AppCompatActivity {
 
         this.btnInsProduct = (Button) findViewById(R.id.btnInsProduct);
 
+        this.btnListProduct = (Button) findViewById(R.id.btnListProduct);
+
+
+
         this.btnInsProduct.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //when click on the button "Insert Product" will be executed the commands bellow
                 Intent intent = new Intent(MainActivity.this, ProductActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        this.btnListProduct.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, ListProducts.class);
                 startActivity(intent);
             }
         });

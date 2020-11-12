@@ -18,5 +18,14 @@
         android:layout_height="wrap_content"
        android:text="Insert Product"
         tools:ignore="MissingConstraints" />
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp"/>
+    <Button
+        android:id="@+id/btnListProduct"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="View Products"
+        tools:ignore="MissingConstraints" />
 
 </LinearLayout>
